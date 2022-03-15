@@ -16,7 +16,7 @@ public class CronParser {
     public CronResponse getCronExpressionToCronResponse(String expression) throws Exception {
         String[] exps = expression.split(" ");
         if(exps.length != Constants.CRON_EXPRESSION_LENGTH) {
-            throw  new CronLengthException();
+            throw  new CronLengthException("Incorrect expression");
         }
 
         CronResponse cronResponse = new CronResponse();
